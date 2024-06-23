@@ -56,4 +56,5 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 -include $(DEPS)
 
 clean:
-	rm $(OBJDIR)/* $(TARGET) -rf
+	find $(OBJDIR) -name "*.o" -type f -delete
+	find $(OBJDIR) -name "*.d" -type f -delete
